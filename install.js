@@ -8,6 +8,8 @@ var sleep = require('sleep');
 
 var CAM_ID = 101;
 var action = 'status';
+//  Set the environment variables we need.
+var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 /**
  * server listening 
@@ -33,7 +35,7 @@ http.createServer(function(req, res){
 
 
 
-}).listen(8080);
+}).listen(port);
 
 
 
